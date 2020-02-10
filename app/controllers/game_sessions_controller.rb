@@ -1,4 +1,5 @@
 class GameSessionsController < ApplicationController
+  
 
   def index
     game_sessions = GameSession.all
@@ -19,5 +20,19 @@ class GameSessionsController < ApplicationController
   def strong_params
     params.require(:game_session).permit(:name, :score)
   end
+
+  def new
+  end
+
+  def create
+    gameSession = GameSession.find(session_params)
+  end
+
+  private
+
+  def session_params
+    params.require(:gameSession).permit(:name)
+  end
+
 
 end
