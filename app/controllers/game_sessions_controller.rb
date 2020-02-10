@@ -1,8 +1,23 @@
 class GameSessionsController < ApplicationController
 
   def index
-    gameSessions = GameSession.all
-    render json: gameSessions
+    game_sessions = GameSession.all
+    render json: game_sessions
+  end
+
+  def create
+
+    game_session = GameSession.create(strong_params)
+    render json: game_session
+  end
+
+  def new
+  end
+
+  private
+
+  def strong_params
+    params.require(:game_session).permit(:name, :score)
   end
 
 end
