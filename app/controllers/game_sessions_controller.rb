@@ -21,18 +21,6 @@ class GameSessionsController < ApplicationController
     params.require(:game_session).permit(:name, :score)
   end
 
-  def new
-  end
-
-  def create
-    gameSession = GameSession.find(session_params)
-  end
-
-  private
-
-  def session_params
-    params.require(:gameSession).permit(:name)
-  end
-
-
 end
+
+
