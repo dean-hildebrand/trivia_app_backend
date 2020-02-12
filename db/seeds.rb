@@ -7,6 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-dean = GameSession.find_or_create_by(name: "Dean", score: 100)
-sklyer = GameSession.find_or_create_by(name: "Sklyer", score: 500)
-shannon = GameSession.find_or_create_by(name: "Shannon", score: 6000)
+
