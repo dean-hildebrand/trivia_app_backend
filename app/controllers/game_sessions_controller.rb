@@ -2,8 +2,9 @@ class GameSessionsController < ApplicationController
   
 
   def index
-    game_sessions = GameSession.all
-    render json: game_sessions
+    game_sessions = GameSession.order(score: :desc)
+    game_sessions_limit = game_sessions.limit(10)
+    render json: game_sessions_limit
   end
 
   def create
