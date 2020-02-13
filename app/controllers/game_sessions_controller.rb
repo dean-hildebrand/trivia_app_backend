@@ -1,5 +1,5 @@
 class GameSessionsController < ApplicationController
-  
+
 
   def index
     game_sessions = GameSession.order(score: :desc)
@@ -23,5 +23,3 @@ class GameSessionsController < ApplicationController
   end
 
 end
-
-
